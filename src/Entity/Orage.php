@@ -1,6 +1,5 @@
 <?php
-
-namespace App;
+namespace App\Entity;
 
 class Orage
 {
@@ -20,8 +19,8 @@ class Orage
         $this->secondeBruit = $secondeBruit;
     }
 
-    public function distanceOrage(): void{
-        $resultat = ($this->secondeBruit)/3;
-        echo "L'orage est à $resultat km de l'utilisateur";
+    public function distanceOrage(): int {
+        return $this->secondeBruit / 3;
     }
 }
+

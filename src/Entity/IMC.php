@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Entity;
 
 class IMC {
 
@@ -32,10 +32,8 @@ class IMC {
         $this->poid = $poid;
     }
 
-    public function calculIMC(): void
+    public function calculIMC(): float
     {
-        $resultat = ($this->poid)/($this->taille*$this->taille);
-        echo "L'IMC de l'utilisateur est de : $resultat";
+        return $this->poid / ($this->taille * $this->taille);
     }
-
 }
